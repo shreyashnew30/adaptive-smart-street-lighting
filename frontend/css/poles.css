@@ -1,0 +1,125 @@
+
+.pole-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.summary-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 19px;
+    border-radius: 11px;
+}
+
+.summary-card span {
+    color: var(--muted);
+    font-size: 11px;
+    display: block;
+}
+
+.summary-card strong {
+    display: block;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.pole-management {
+    padding: 22px;
+}
+
+.pole-filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.pole-filters input,
+.pole-filters select,
+.analytics-panel select {
+    padding: 11px 13px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: white;
+    outline: none;
+    color: var(--text);
+    font-size: 11px;
+}
+
+.pole-filters input {
+    flex: 1;
+    min-width: 150px;
+}
+
+.pole-filters input:focus,
+.pole-filters select:focus,
+.analytics-panel select:focus {
+    border-color: var(--primary);
+}
+
+.pole-id {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.mode-badge {
+    padding: 5px 9px;
+    border-radius: 5px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.control-btn {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    min-width: 65px;
+}
+
+.control-on {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.control-off {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-top: 18px;
+}
+
+.table-footer span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+@media (max-width: 700px) {
+    .pole-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pole-filters {
+        flex-direction: column;
+    }
+
+    .pole-filters input,
+    .pole-filters select {
+        width: 100%;
+    }
+}

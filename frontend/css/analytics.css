@@ -1,0 +1,108 @@
+
+.analytics-panel {
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.distribution {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.distribution-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.distribution-row > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    border-radius: 20px;
+    background: #f1f5f9;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 20px;
+    width: 0;
+    transition: width 0.4s ease;
+}
+
+.green-fill {
+    background: #16a34a;
+}
+
+.orange-fill {
+    background: #ea8b16;
+}
+
+.red-fill {
+    background: #dc2626;
+}
+
+.insights {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.insight-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: #f8fafc;
+    padding: 13px;
+    border-radius: 8px;
+}
+
+.insight-item > span {
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.insight-item p {
+    font-size: 11px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .chart-container {
+        height: 230px;
+    }
+}
